@@ -1,54 +1,61 @@
 module.exports = {
 
-	process: function (specters, next) {
+  process: function (urls, next) {
 
-		var that = this;
-		var specter = require('./specter')
+    var that = this;
+    var specter = require('./specter')
+    var $ = require('jquery');
 
-		that.specter = specter;
-		that.processSpecter({
-			index: 0,
-			specters: specters
-		}, next);
+    that.$ = $;    
+    that.specter = specter;
+    
+    that.processUrl({
+      index: 0,
+      urls: urls 
+    }, next);
 
-	},
+  },
 
-	processSpecter: function (params, next) {
+  processUrl: function (params, next) {
 
-		var that = this;
-		var specter = that.specter;
-		var specters = params.specters;
-		var index = params.index;
-		var spec = specters[index];
-			
-		if (spec) {
+    var that = this;
+    var $ = that.$;
+    var specter = that.specter;
+    var urls = params.urls;
+    var index = params.index;
+    var url = urls[index];
+   
+    if (url) {
+    
+      var address = url.address;
+      var wait = url.wait;      
+      var select = url.select;      
 
-			var url = spec.url;
-			var select = spec.select;
-			var get = spec.get;
-		
-			specter({
-				
-				url: url, 
-				selector: select,
-				fn: get
-			
-			}, function (err, data) {
-			
-				next(err, {
-					specter: spec,
-					data: data 
-				});	
-				
-				that.processSpecter({
-					index: (index + 1),
-					specters: specters
-				}, next);			
-		
-			});
+      specter({
+        
+        url: address,
+        wait: wait,
+        select: select
+      
+      }, function (err, data) {
 
-		}
+        if (err) {
+          next(err);  
+        } else if (!data) {
+          next(err); 
+        } else {
+          next(err, data, $(data));
+        }
+        
+        that.processUrl({
+          index: (index + 1),
+          urls: urls
+        }, next);     
+    
+      });
 
-	}
+    }
+
+  }
 
 };

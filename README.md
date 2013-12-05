@@ -1,7 +1,7 @@
 Specter 
 ===
 
-Specter is a Node.js wrapper for PhantomJs. It was made to easily access dynamically and asynchronusly HTML pages. 
+Specter is a Node.js wrapper for PhantomJs. It was made to easily access dynamically and asynchronously created HTML pages.
 
 
 Setup
@@ -11,7 +11,7 @@ Setup
 
 2) Install [Node.js](http://nodejs.org/)
 
-3) Install Specter (npm install specter)
+3) Install Specter (npm install specter * coming soon...)
 
 Examples
 ---
@@ -68,5 +68,5 @@ Examples
 
        }
 
-});
+     });
 

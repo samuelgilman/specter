@@ -1,7 +1,7 @@
 Specter 
 ===
 
-Specter is a Node.js wrapper for PhantomJs. It was made to easily access dynamically and asynchronously created HTML pages.
+Specter is a Node.js wrapper for PhantomJs. PhantomJS is a headless browser which enables developers to load webpages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js as a wraper for PhantomJS in the easiest manner.
 
 
 Setup

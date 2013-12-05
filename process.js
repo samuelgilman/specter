@@ -30,6 +30,7 @@ module.exports = {
       var address = url.address;
       var wait = url.wait;      
       var select = url.select;      
+      console.log(select);
 
       specter({
         

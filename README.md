@@ -19,30 +19,29 @@ Examples
      var specter = require('specter');
      var urls = [];
 
-     var address = 'https://www.coindega.com/api/0.0.0/#items'; // Required
-     var select = '.items'; // document.querySelector('.items');
+     var address = 'https://www.coindega.com/api/0.0.0/#items'; // 100% Javascript App 
 
-     // just get the page onload
+     // Just get the page when it loads.
 
      urls.push({
        address: address,
      });
 
-     // wait 15 seconds to ensure all dynamic content has loaded
+     // Wait 15 seconds to ensure all dynamic content has been loaded.
 
      urls.push({
        address: address,
        wait: 15000
      });
 
-     // wait for a selector to load
+     // Wait for a selector to load with no timeout.
 
      urls.push({
        address: address,
        select: '.items'
      });
 
-     // wait for a selector to load with a timeout
+     // Wait for a selector to load with a timeout.
 
      urls.push({
        address: address,
@@ -69,4 +68,3 @@ Examples
        }
 
      });
-

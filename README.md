@@ -1,70 +1,124 @@
-Specter 
-===
-
-Specter is a Node.js wrapper for PhantomJs. PhantomJS is a headless browser which enables developers to load webpages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js as a wraper for PhantomJS in the easiest manner.
-
-
-Setup
+# Specter (Node.js)
 ---
+Specter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.
 
+
+## Setup
+---
 1) Install [PhantomJS](http://phantomjs.org/release-1.1.html)
 
 2) Install [Node.js](http://nodejs.org/)
 
 3) Install Specter (npm install specter * coming soon...)
 
-Examples
+### 1) Return a page's HTML.
 ---
 
-     var specter = require('specter');
-     var urls = [];
+This returns the page when it has loaded. Generally this will not return any dynamic context, but it is a good start.
 
-     var address = 'https://www.coindega.com/api/0.0.0/#items'; // 100% Javascript App 
+---
+    var specter = require('specter');
+    var urls = [];
 
-     // Just get the page when it loads.
+    urls.push({
+      address: 'https://www.coindega.com/api/0.0.0/#items'
+    });
 
-     urls.push({
-       address: address,
-     });
+    specter.process(urls, function (err, html) {
 
-     // Wait 15 seconds to ensure all dynamic content has been loaded.
+      if (err) {
+        console.log(err);
+      } else if (!html) {
+        console.log('nothing found')
+      } else {
+        console.log(html);
+      }
 
-     urls.push({
-       address: address,
-       wait: 15000
-     });
+    });
 
-     // Wait for a selector to load with no timeout.
+### 2) Wait for a selector to be present before returning.
+---
 
-     urls.push({
-       address: address,
-       select: '.items'
-     });
+By providing select Specter will wait for until document.querySelect('.your .item') to return a value. Once it returns a value the entire html document will be returned.
 
-     // Wait for a selector to load with a timeout.
+---
+    var specter = require('specter');
+    var urls = [];
 
-     urls.push({
-       address: address,
-       select: '.itmes',
-       wait: 10000
-     });
+    urls.push({
+      address: 'https://www.coindega.com/api/0.0.0/#items',
+      select: '.items .title'
+    });
 
-     specter.process(urls, function (err, result, $) {
+    specter.process(urls, function (err, html) {
 
-       if (err) {
+      if (err) {
+        console.log(err);
+      } else if (!html) {
+        console.log('nothing found')
+      } else {
+        console.log(html);
+      }
 
-         console.log(err);
+    });
 
-       } else if (!$) {
 
-         console.log('Nothing was returned')
+### 3) Wait for a selector to be present with a timeout.
+---
 
-       } else {
+This does the same thing 
 
-         var $el = $.find('.items');
-         var html = $el.html();
-         console.log(html);
+---
+    var specter = require('specter');
+    var urls = [];
 
-       }
+    urls.push({
+      address: 'https://www.coindega.com/api/0.0.0/#items',
+      select: '.items .title',
+      wait: (10 * 1000) // return after 10 seconds if nothing found
+    });
 
-     });
+    specter.process(urls, function (err, html) {
+
+      if (err) {
+        console.log(err);
+      } else if (!html) {
+        console.log('nothing found')
+      } else {
+        console.log(html);
+      }
+
+    });
+
+### 4) With jQuery.
+---
+
+Specter has no dependencies so the response is just a string; howerver, it is trivial to add jQuery.
+
+---
+    var jquery = require('jquery');
+    var specter = require('specter');
+    var urls = [];
+
+    urls.push({
+      address: 'https://www.coindega.com/api/0.0.0/#items',
+      select: '.items .title',
+      wait: (10 * 1000) // return after 10 seconds if nothing found
+    });
+
+    specter.process(urls, function (err, html) {
+
+      if (err) {
+        console.log(err);
+      } else if (!html) {
+        console.log('nothing found')
+      } else {
+        var $ = jquery(html);
+        var $el = $.find('.items .title');
+        var $first = $el.first();
+        var text = $first.text();
+        console.log(text);
+      }
+
+    });
+

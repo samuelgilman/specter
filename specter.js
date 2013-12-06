@@ -16,11 +16,10 @@ module.exports = function (params, next) {
 
   exec('phantomjs ' + path, {
    
-     maxBuffer: 500*1024
+     maxBuffer: (1024*10*10*10*10)
   
   }, function (error, stdout, stderr) {
 
-    stdout = stdout.replace('\n', '');
     next(error, stdout);
 
   });

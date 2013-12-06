@@ -4,9 +4,7 @@ module.exports = {
 
     var that = this;
     var specter = require('./specter')
-    var $ = require('jquery');
 
-    that.$ = $;    
     that.specter = specter;
     
     that.processUrl({
@@ -19,7 +17,6 @@ module.exports = {
   processUrl: function (params, next) {
 
     var that = this;
-    var $ = that.$;
     var specter = that.specter;
     var urls = params.urls;
     var index = params.index;
@@ -30,7 +27,6 @@ module.exports = {
       var address = url.address;
       var wait = url.wait;      
       var select = url.select;      
-      console.log(select);
 
       specter({
         
@@ -40,14 +36,8 @@ module.exports = {
       
       }, function (err, data) {
 
-        if (err) {
-          next(err);  
-        } else if (!data) {
-          next(err); 
-        } else {
-          next(err, data, $(data));
-        }
-        
+        next(err, data);
+ 
         that.processUrl({
           index: (index + 1),
           urls: urls

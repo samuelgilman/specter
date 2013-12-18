@@ -8,7 +8,7 @@ module.exports = function (params, next) {
   var exec = childProcess.exec;
   var path = [__dirname, 'fetch.js'].join('/');
 
-  process.env['PARAMS'] = JSON.stringify({ 
+  process.env['SPECTER_PC_PARAMS'] = JSON.stringify({ 
     url: url,
     wait: wait,
     select: select

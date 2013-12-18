@@ -36,7 +36,7 @@ module.exports = {
       
       }, function (err, data) {
 
-        next(err, data);
+        next(err, url, data);
  
         that.processUrl({
           index: (index + 1),

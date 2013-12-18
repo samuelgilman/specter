@@ -1,10 +1,43 @@
 {
   "name": "specter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "engines": {
-    "node": "0.10.17",
-    "npm":  "1.2.25"
+    "node": "*",
+    "npm": "*"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "description": "Specter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelgilman/specter.git"
+  },
+  "keywords": [
+    "specter",
+    "phantomjs",
+    "crawl",
+    "screen",
+    "scrape",
+    "javascript",
+    "node.js",
+    "dynamic",
+    "content",
+    "ajax",
+    "asyc"
+  ],
+  "author": {
+    "name": "samuelgilman"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/samuelgilman/specter/issues"
+  },
+  "homepage": "https://github.com/samuelgilman/specter",
+  "readme": "# Specter (Node.js)\nSpecter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.\n\n\n## Setup\n1) Install [PhantomJS](http://phantomjs.org/release-1.1.html)\n\n2) Install [Node.js](http://nodejs.org/)\n\n3) Install Specter (npm install specter * coming soon...)\n\n### 1) Return a page's HTML.\n\nThis returns the page when it has loaded. Generally this will not return any dynamic context, but it is a good start.\n\n    var specter = require('specter');\n    var urls = [];\n\n    urls.push({\n      address: 'https://www.coindega.com/api/0.0.0/#items'\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log('nothing found')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n### 2) Wait for a selector to be present before returning.\n\nBy providing select Specter will wait for until document.querySelect('.your .item') to return a value. Once it returns a value the entire html document will be returned.\n\n    var specter = require('specter');\n    var urls = [];\n\n    urls.push({\n      address: 'https://www.coindega.com/api/0.0.0/#items',\n      select: '.items .title'\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log('nothing found')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n\n### 3) Wait for a selector to be present with a timeout.\n\nThis does the same thing \n\n    var specter = require('specter');\n    var urls = [];\n\n    urls.push({\n      address: 'https://www.coindega.com/api/0.0.0/#items',\n      select: '.items .title',\n      wait: (10 * 1000) // return after 10 seconds if nothing found\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log('nothing found')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n### 4) With jQuery.\n\nSpecter has no dependencies so the response is just a string; howerver, it is trivial to add jQuery.\n\n    var jquery = require('jquery');\n    var specter = require('specter');\n    var urls = [];\n\n    urls.push({\n      address: 'https://www.coindega.com/api/0.0.0/#items',\n      select: '.items .title',\n      wait: (10 * 1000) // return after 10 seconds if nothing found\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log('nothing found')\n      } else {\n        var $ = jquery(html);\n        var $el = $.find('.items .title');\n        var $first = $el.first();\n        var text = $first.text();\n        console.log(text);\n      }\n\n    });\n\n",
+  "readmeFilename": "README.md",
+  "_id": "specter@0.0.1",
+  "_from": "specter@"
 }

@@ -20,13 +20,14 @@ This returns the page when it has loaded. Generally this will not return any dyn
       address: 'https://www.coindega.com/api/0.0.0/#items'
     });
 
-    specter.process(urls, function (err, html) {
+    specter.process(urls, function (err, url, html) {
 
       if (err) {
         console.log(err);
       } else if (!html) {
         console.log('nothing found')
       } else {
+        console.log(url);
         console.log(html);
       }
 
@@ -44,13 +45,14 @@ By providing select Specter will wait for until document.querySelect('.your .ite
       select: '.items .title'
     });
 
-    specter.process(urls, function (err, html) {
+    specter.process(urls, function (err, url, html) {
 
       if (err) {
         console.log(err);
       } else if (!html) {
         console.log('nothing found')
       } else {
+        console.log(url);
         console.log(html);
       }
 
@@ -96,7 +98,7 @@ Specter has no dependencies so the response is just a string; howerver, it is tr
       wait: (10 * 1000) // return after 10 seconds if nothing found
     });
 
-    specter.process(urls, function (err, html) {
+    specter.process(urls, function (err, url, html) {
 
       if (err) {
         console.log(err);
@@ -107,6 +109,7 @@ Specter has no dependencies so the response is just a string; howerver, it is tr
         var $el = $.find('.items .title');
         var $first = $el.first();
         var text = $first.text();
+        console.log(url);
         console.log(text);
       }
 

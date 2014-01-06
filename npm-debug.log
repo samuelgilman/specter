@@ -1,0 +1,148 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/samuelgilman/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+12 verbose folder .
+13 info prepublish specter@0.1.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/samuelgilman/.npm/1f1177db-tar.lock
+16 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+17 verbose lock tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz /Users/samuelgilman/.npm/d1b30270-2050-0-32612548233009875-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+21 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+22 verbose tar unpack /var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+23 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+24 verbose lock tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package /Users/samuelgilman/.npm/ab555a07-2050-0-32612548233009875-package.lock
+25 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+26 verbose lock tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz /Users/samuelgilman/.npm/d1b30270-2050-0-32612548233009875-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry fetch.js
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm extractEntry process.js
+34 silly gunzTarPerm extractEntry specter.js
+35 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+36 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+37 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+38 silly lockFile d1b30270-2050-0-32612548233009875-tmp-tgz tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/tmp.tgz
+39 verbose tar pack [ '/Users/samuelgilman/.npm/specter/0.1.0/package.tgz',
+39 verbose tar pack   '/var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package' ]
+40 verbose tarball /Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+41 verbose folder /var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+42 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+43 verbose lock tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package /Users/samuelgilman/.npm/ab555a07-2050-0-32612548233009875-package.lock
+44 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+45 verbose lock tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz /Users/samuelgilman/.npm/ea0f704c-an-npm-specter-0-1-0-package-tgz.lock
+46 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+47 silly lockFile ab555a07-2050-0-32612548233009875-package tar:///var/folders/zf/7p63dh011nvcv_bcncxt_wf00000gp/T/npm-5862-vK2RwD-M/1388991142050-0.32612548233009875/package
+48 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+49 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+50 silly lockFile 22002813-gilman-npm-specter-0-1-0-package /Users/samuelgilman/.npm/specter/0.1.0/package
+51 verbose lock /Users/samuelgilman/.npm/specter/0.1.0/package /Users/samuelgilman/.npm/22002813-gilman-npm-specter-0-1-0-package.lock
+52 silly lockFile 22002813-gilman-npm-specter-0-1-0-package /Users/samuelgilman/.npm/specter/0.1.0/package
+53 silly lockFile 22002813-gilman-npm-specter-0-1-0-package /Users/samuelgilman/.npm/specter/0.1.0/package
+54 verbose tar unpack /Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+55 silly lockFile dac46a02-gilman-npm-specter-0-1-0-package tar:///Users/samuelgilman/.npm/specter/0.1.0/package
+56 verbose lock tar:///Users/samuelgilman/.npm/specter/0.1.0/package /Users/samuelgilman/.npm/dac46a02-gilman-npm-specter-0-1-0-package.lock
+57 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+58 verbose lock tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz /Users/samuelgilman/.npm/ea0f704c-an-npm-specter-0-1-0-package-tgz.lock
+59 silly gunzTarPerm modes [ '755', '644' ]
+60 silly gunzTarPerm extractEntry package.json
+61 silly gunzTarPerm extractEntry .npmignore
+62 silly gunzTarPerm extractEntry README.md
+63 silly gunzTarPerm extractEntry fetch.js
+64 silly gunzTarPerm extractEntry index.js
+65 silly gunzTarPerm extractEntry process.js
+66 silly gunzTarPerm extractEntry specter.js
+67 silly lockFile dac46a02-gilman-npm-specter-0-1-0-package tar:///Users/samuelgilman/.npm/specter/0.1.0/package
+68 silly lockFile dac46a02-gilman-npm-specter-0-1-0-package tar:///Users/samuelgilman/.npm/specter/0.1.0/package
+69 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+70 silly lockFile ea0f704c-an-npm-specter-0-1-0-package-tgz tar:///Users/samuelgilman/.npm/specter/0.1.0/package.tgz
+71 verbose chmod /Users/samuelgilman/.npm/specter/0.1.0/package.tgz 644
+72 verbose chown /Users/samuelgilman/.npm/specter/0.1.0/package.tgz [ 502, 20 ]
+73 silly lockFile 3a52ce78- .
+74 silly lockFile 3a52ce78- .
+75 silly publish { name: 'specter',
+75 silly publish   version: '0.1.0',
+75 silly publish   private: false,
+75 silly publish   engines: { node: '*', npm: '*' },
+75 silly publish   dependencies: {},
+75 silly publish   description: 'Specter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.',
+75 silly publish   main: 'index.js',
+75 silly publish   devDependencies: {},
+75 silly publish   scripts: {},
+75 silly publish   repository:
+75 silly publish    { type: 'git',
+75 silly publish      url: 'https://github.com/samuelgilman/specter.git' },
+75 silly publish   keywords:
+75 silly publish    [ 'specter',
+75 silly publish      'phantomjs',
+75 silly publish      'crawl',
+75 silly publish      'screen',
+75 silly publish      'scrape',
+75 silly publish      'javascript',
+75 silly publish      'node.js',
+75 silly publish      'dynamic',
+75 silly publish      'content',
+75 silly publish      'ajax',
+75 silly publish      'asyc' ],
+75 silly publish   author: { name: 'samuelgilman' },
+75 silly publish   license: 'BSD-2-Clause',
+75 silly publish   bugs: { url: 'https://github.com/samuelgilman/specter/issues' },
+75 silly publish   homepage: 'https://github.com/samuelgilman/specter',
+75 silly publish   readme: '# Specter (Node.js)\nSpecter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.\n\n\n## Setup\n1) Install [PhantomJS](http://phantomjs.org/release-1.1.html)\n\n2) Install [Node.js](http://nodejs.org/)\n\n3) Install Specter (npm install specter * coming soon...)\n\n### 1) Return a page\'s HTML.\n\nThis returns the page when it has loaded. Generally this will not return any dynamic context, but it is a good start.\n\n    var specter = require(\'specter\');\n    var urls = [];\n\n    urls.push({\n      address: \'https://www.coindega.com/api/0.0.0/#items\'\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log(\'nothing found\')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n### 2) Wait for a selector to be present before returning.\n\nBy providing select Specter will wait for until document.querySelect(\'.your .item\') to return a value. Once it returns a value the entire html document will be returned.\n\n    var specter = require(\'specter\');\n    var urls = [];\n\n    urls.push({\n      address: \'https://www.coindega.com/api/0.0.0/#items\',\n      select: \'.items .title\'\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log(\'nothing found\')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n\n### 3) Wait for a selector to be present with a timeout.\n\nThis does the same thing \n\n    var specter = require(\'specter\');\n    var urls = [];\n\n    urls.push({\n      address: \'https://www.coindega.com/api/0.0.0/#items\',\n      select: \'.items .title\',\n      wait: (10 * 1000) // return after 10 seconds if nothing found\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log(\'nothing found\')\n      } else {\n        console.log(html);\n      }\n\n    });\n\n### 4) With jQuery.\n\nSpecter has no dependencies so the response is just a string; howerver, it is trivial to add jQuery.\n\n    var jquery = require(\'jquery\');\n    var specter = require(\'specter\');\n    var urls = [];\n\n    urls.push({\n      address: \'https://www.coindega.com/api/0.0.0/#items\',\n      select: \'.items .title\',\n      wait: (10 * 1000) // return after 10 seconds if nothing found\n    });\n\n    specter.process(urls, function (err, html) {\n\n      if (err) {\n        console.log(err);\n      } else if (!html) {\n        console.log(\'nothing found\')\n      } else {\n        var $ = jquery(html);\n        var $el = $.find(\'.items .title\');\n        var $first = $el.first();\n        var text = $first.text();\n        console.log(text);\n      }\n\n    });\n\n',
+75 silly publish   readmeFilename: 'README.md',
+75 silly publish   _id: 'specter@0.1.0',
+75 silly publish   _from: '.',
+75 silly publish   dist: { shasum: '6e9eb6e34d4d158eff8431981dce932e99b26ec2' } }
+76 verbose url raw specter
+77 verbose url resolving [ 'https://registry.npmjs.org/', './specter' ]
+78 verbose url resolved https://registry.npmjs.org/specter
+79 info trying registry request attempt 1 at 14:52:25
+80 http PUT https://registry.npmjs.org/specter
+81 http 409 https://registry.npmjs.org/specter
+82 verbose url raw specter
+83 verbose url resolving [ 'https://registry.npmjs.org/', './specter' ]
+84 verbose url resolved https://registry.npmjs.org/specter
+85 info trying registry request attempt 1 at 14:52:27
+86 http GET https://registry.npmjs.org/specter
+87 http 200 https://registry.npmjs.org/specter
+88 error publish fail Cannot publish over existing version.
+88 error publish fail Update the 'version' field in package.json and try again.
+88 error publish fail
+88 error publish fail If the previous version was published in error, see:
+88 error publish fail     npm help unpublish
+88 error publish fail
+88 error publish fail To automatically increment version numbers, see:
+88 error publish fail     npm help version
+89 error System Darwin 13.0.0
+90 error command "node" "/usr/local/bin/npm" "publish"
+91 error cwd /Users/samuelgilman/Desktop/specter
+92 error node -v v0.10.22
+93 error npm -v 1.3.14
+94 error code EPUBLISHCONFLICT
+95 verbose exit [ 1, true ]

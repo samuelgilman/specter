@@ -115,3 +115,26 @@ Specter has no dependencies so the response is just a string; howerver, it is tr
 
     });
 
+### 5) Sync.
+
+If you do not need to wait for the Javascript to load Specter can get the page with curl. Obviusly wait and select are not used in the scenario.
+
+    var specter = require('specter');
+    var urls = [];
+
+    urls.push({
+      address: 'https://www.coindega.com/api/0.0.0/#items',
+      sync: true
+    });
+
+    specter.process(urls, function (err, url, html) {
+
+      if (err) {
+        console.log(err);
+      } else if (!html) {
+        console.log('nothing found')
+      } else {
+        console.log(html);
+      }
+
+    });

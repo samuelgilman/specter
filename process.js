@@ -27,12 +27,14 @@ module.exports = {
       var address = url.address;
       var wait = url.wait;      
       var select = url.select;      
-
+      var sync = url.sync;
+  
       specter({
         
         url: address,
         wait: wait,
-        select: select
+        select: select,
+        sync: sync
       
       }, function (err, data) {
 

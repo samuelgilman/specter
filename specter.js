@@ -11,27 +11,23 @@ module.exports = function (params, next) {
 
   if (!sync) {
 
-    console.log('async'); 
+    process.env['SPECTER_PC_PARAMS'] = JSON.stringify({ 
+      url: url,
+      wait: wait,
+      select: select
+    }); 
 
-     process.env['SPECTER_PC_PARAMS'] = JSON.stringify({ 
-       url: url,
-       wait: wait,
-       select: select
-     }); 
-
-     exec(('phantomjs ' + path), {
-      
-        maxBuffer: (1024*10*10*10*10)
+    exec(('phantomjs ' + path), {
      
-     }, function (error, stdout, stderr) {
+       maxBuffer: (1024*10*10*10*10)
+    
+    }, function (error, stdout, stderr) {
 
-       next(error, stdout);
+      next(error, stdout);
 
-     });
+    });
  
   } else {
-
-    console.log('sync');
 
     exec(('curl ' + url), {
 

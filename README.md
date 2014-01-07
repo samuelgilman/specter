@@ -1,13 +1,12 @@
 # Specter (Node.js)
 Specter is a Node.js wrapper for PhantomJS. PhantomJS is a headless browser which enables developers to load pages that rely on Javascript. Specter was made to easily access these dynamically and asynchronously created HTML pages using Node.js.
 
-
 ## Setup
 1) Install [PhantomJS](http://phantomjs.org/release-1.1.html)
 
 2) Install [Node.js](http://nodejs.org/)
 
-3) Install Specter (npm install specter * coming soon...)
+3) Install Specter (npm install specter)
 
 ### 1) Return a page's HTML.
 
@@ -117,7 +116,7 @@ Specter has no dependencies so the response is just a string; howerver, it is tr
 
 ### 5) Sync.
 
-If you do not need to wait for the Javascript to load Specter can get the page with curl. Obviusly wait and select are not used in the scenario.
+If you do not need to wait for the Javascript to load Specter can get the page with curl. Obviusly wait and select cannot be used in this scenario.
 
     var specter = require('specter');
     var urls = [];
